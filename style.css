@@ -23,7 +23,6 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* align-items: center; */
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -495,15 +494,15 @@ font-size: 4rem;
 
 @media (max-width: 768px) {
   .hours {
-    flex-direction: column;  /* Stack elements vertically on small screens */
-    height: auto;  /* Adjust height for stacked layout */
-    align-items: center;  /* Ensure the content stays centered vertically */
+    flex-direction: column;
+    height: auto;
+    align-items: center;
   }
 
   .headerhours {
-    margin: 10px 0;  /* Adjust margins for better spacing */
-    width: 100%;  /* Make sure each .headerhours div takes up full width */
-    text-align: center;  /* Keep text centered */
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -534,7 +533,6 @@ footer {
 
 .footer .footerbar a {
   color: black;
-  /* margin-left: 25px; */
   font-size: 1.5rem;
   transition: all 0.5s ease;
   animation: fadeInUp 1s ease-in-out;
@@ -575,8 +573,8 @@ transition: all 0.3s ease-in-out;
   color: #A3A38C;
   overflow: hidden;
   display: flex;
-  justify-content: center;  /* Centers horizontally */
-  align-items: center;  /* Centers vertically */
+  justify-content: center;
+  align-items: center;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -585,16 +583,11 @@ transition: all 0.3s ease-in-out;
 .registerbody {
   width: 100%;
   font-family: Arial, Helvetica, sans-serif;
-  /* min-height: 800px; */
-  /* overflow: hidden; */
 }
 
 .registerform {
-  /* border-radius: 5px; */
   background-color: #f2f2f2;
   padding: 20px;
-  /* height: 100%; */
-  /* height: 500px; */
 }
 
 input[type=text], input[type=password] {
@@ -609,7 +602,6 @@ input[type=text], input[type=password] {
 }
 
 input[type=text]:focus, input[type=password]:focus {
-  /* background-color: lightsteelblue; */
   outline: none;
 }
 
@@ -673,7 +665,6 @@ hr {
   width: 70%;
   height: 500px;
   margin-top:40px;
-  /* background-clip: content-box; */
   border-radius: 25px;
   box-shadow: 0 0 15px black;
 }
@@ -711,7 +702,6 @@ hr {
   background-clip: content-box;
   border-radius: 25px;
   box-shadow: 0 0 15px black;
-  /* float:right; */
 }
   
 .fttimg{
@@ -738,7 +728,6 @@ hr {
   
 .Abtinfoftt p{
   text-align: left;
-  /* font-size: 27px; */
   width: 45%;
   float: right;
   margin-right: 30px;
@@ -1103,13 +1092,10 @@ hr {
 
 .dishes4 h2{
   text-align: center;
-  /* font-weight: 1000; */
-  /* font-size: xx-large; */
 }
 .dishes4 p{
   text-align: center;
   padding-top: 2.5%;
-  /* font-size: x-large; */
 }
 
 /* the images */
