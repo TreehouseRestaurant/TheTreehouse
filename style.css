@@ -1,0 +1,1263 @@
+* {
+  margin: 0;
+}
+
+body {
+  margin:0;
+  padding:0;
+  width:100%;
+}
+
+button {
+  all: unset;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* These are css things i am going to call again and again */
+
+.Center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* align-items: center; */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.TextCenter{
+  text-align: center;
+}
+
+.links {
+  color: dodgerblue;
+}
+
+/* This is the start of the CSS edits. It should align with how the home page is aligned, Different sections will be commented off for different pages (home page, menu etc...) */
+/* Home Page Start */
+
+/* keeping it in order, nav bar start */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  animation: slideInFromTop 1s ease-in-out;
+  background-color: #6A9F6A;
+  height: 105px;
+  float: left;
+  width: 100%;
+  border-bottom: 2px solid rgba(33, 33, 33, 0.2);
+  font-weight: 600;
+}
+
+.NavImg {
+  max-height: 80px;
+  float: right;
+  margin-left: 200px;
+  margin-right: 25px;
+}
+
+.navbar .center-nav a:hover {
+  color: #5D4E6D;
+  text-shadow: 0px 0px 30px #5D4E6D;
+}
+
+
+.navbar .center-nav a{
+  position: relative;
+  text-decoration:none;
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline;
+}
+
+
+.navbar .center-nav a::before{
+content: "";
+position: absolute;
+width: 100%;
+height: 2px;
+bottom: 0;
+left: 0;
+background-color: #5D4E6D;
+visibility: hidden;
+transform: scaleX(0);
+transition: all 0.3s ease-in-out;
+}
+
+.navbar .center-nav a:hover::before{
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.center-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.center-nav li {
+  display: inline-block;
+}
+
+.center-nav a {
+  text-decoration: none;
+  color: #D9C6A1;
+  font-size: 1.5rem;
+  padding: 20px 25px;
+  transition: all 0.5s ease;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.center-nav a:hover {
+  color: #5D4E6D;
+  text-shadow: 0px 0px 30px #5D4E6D;
+}
+
+.hamburger {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  display: none;
+  margin-left: 90%;
+  float: left;
+  max-width: 100%;
+  position: absolute;
+}
+
+.navimgsscreen {
+  max-height: 80px;
+  display: none;
+  margin-left: 5px;
+}
+
+@media screen and (max-width: 900px) {
+  * {
+    margin: 0;
+  }
+
+  .center-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 105px;
+    right: 20px;
+    background-color: #6A9F6A;
+    width: 200px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 100;
+  }
+
+  .center-nav.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    overflow: hidden;
+  }
+
+  .NavImg {
+    display: none;
+  }
+
+  .navimgsscreen {
+    display: inline;
+  }
+}
+
+/* This is the Main Picture of the website otherwise known as the "Call to Action" or the hook or even the attention grabber. Its supposed to suck you into the website. For this website it is just the main picture */
+
+.CallToAction {
+  background: linear-gradient(to bottom, #6A9F6A, #F4E3C1);
+  width: 100%;
+  min-height: 60ch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  flex-direction: row;
+}
+
+.CTAh1 {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.CTAh1 h1 {
+  font-weight: bold;
+  font-size: 3rem;
+  font-family: sans-serif;
+  margin: 10px 0;
+  color: #333333;
+}
+
+.CTAh1 p {
+  padding: 20px;
+  margin: 10px 0;
+  color: #333333;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.CTAh1 div {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.CTAh1 .btn, .CTAh1 .btn2 {
+  padding: 12px 22px;
+  border-radius: 6px;
+  transition: all 0.5s ease;
+  text-decoration: none;
+  display: inline-block;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.CTAh1 .btn {
+  border: 2px solid #B85042;
+  background-color: transparent;
+}
+
+.CTAh1 .btn2 {
+  border: 2px solid #7A8450;
+  background-color: transparent;
+}
+
+.CTAh1 .btn:hover, .CTAh1 .btn2:hover {
+  background-color: #5D4E6D;
+  box-shadow: 0 0 10px #5D4E6D;
+}
+
+.Leaf {
+  width: 50%;
+  height: 450px;
+  object-fit: cover;
+  order: 1;
+}
+
+@media (max-width: 768px) {
+  .CallToAction {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Leaf {
+    order: -1;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .CTAh1 {
+    max-width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .CTAh1 .btn, .CTAh1 .btn2 {
+    width: 80%;
+    margin: 5px auto;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .CTAh1 h1 {
+    font-size: 2.5rem;
+  }
+
+  .CTAh1 p {
+    font-size: 1rem;
+  }
+}
+
+.FeaturedItemsHome {
+  background-color: #F4E3C1;
+  width: 100%;
+  max-height: 540px;
+  float: left;
+}
+
+.FIHeader {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 20px;
+  color: #5C4033;
+}
+
+.featuredresponsive {
+  display: flex;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  gap: 10px;
+  padding: 10px;
+  scroll-snap-type: x mandatory;
+  position: relative;
+  scrollbar-width: thin;
+  scrollbar-color: #5A6E3D #F4E3C1;
+  justify-content: center;
+}
+
+@media (max-width: 1706px) {
+  .featuredresponsive {
+    justify-content: unset;
+  }
+}
+
+.featuredresponsive::-webkit-scrollbar {
+  height: 8px;
+}
+
+.featuredresponsive::-webkit-scrollbar-thumb {
+  background-color: #5A6E3D;
+  border-radius: 10px;
+}
+
+.featuredresponsive::-webkit-scrollbar-track {
+  background: #F4E3C1;
+}
+
+.FeaturedBlock {
+  background-color: #5A6E3D;
+  flex: 0 0 250px;
+  max-height: 450px;
+  padding: 3vh 5vh;
+  background-clip: content-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  scroll-snap-align: start;
+  min-width: 250px;
+}
+
+.FBlockImg {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+}
+
+.FBlockText { 
+  max-height: 187px;
+  padding-top: 50px;
+}
+
+.FeaturedBlock p {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+  color: #D4A373;
+}
+
+/* This is the start of our "Register Now" section */
+
+.RegisterHome {
+  background-color: #3D5A40;
+  background: linear-gradient(to bottom, #3D5A40 ,#6A8F6A);
+  width: 100%;
+  min-height: 629px;
+  float: left;
+  font-family: Arial, Helvetica, sans-serif;
+  border-top: 2px solid black;  
+}
+
+.RegisterBox {
+  background-color: #E4C1A2;
+  width: 460px;
+  min-height: 450px;
+  margin-top: 9.5vh;
+  background-clip: content-box;
+  border-radius: 25px;
+}
+
+.RBoxH1 {
+  text-align: center;
+}
+
+.RegisterBox p {
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 15px;
+}
+
+.RNow {
+  max-width: 138px;
+  min-width: 138px;
+  min-height: 59px;
+  max-height: 59px;
+  border-radius: 70px;
+  background-color: #C19A4C;
+  margin: auto;
+  margin-top: 45%;
+  transition: all 0.5s ease;
+  animation: fadeInUp 1s ease-in-out 0.5 backwards;
+  overflow: hidden;
+}
+
+.RegisterBox .RNow:hover {
+  background-color: #5D4E6D;
+  box-shadow: 0 0 10px #5D4E6D;
+}
+
+.RNowText{
+  text-align: center;
+  padding: 21px 20px 20px;
+  margin: 0;
+}
+
+.Rbtn {
+color: black;
+border: 2px solid;
+top: 3rem;
+padding: 14px 25px;
+border-radius: 6px;
+transition: all 0.5s ease;
+animation: fadeInUp 1s ease-in-out 0.5 backwards;
+color: #FFFFFF;
+border: 2px solid #B85042;
+font-family: Arial, Helvetica, sans-serif;
+margin-top: 60%;
+}
+
+/* This is the start of the "Whats New" section */
+
+.WhatsNewHome {
+  background-color: #004643;
+  width: 100%;
+  height: 700px;
+  float: right;
+}
+
+
+.WhatsNewHome h1{
+text-align: center;
+color: white;
+font-weight: bold;
+font-size: 4rem;
+}
+
+.WhatsNewHome p{
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.WNBlock {
+  background-color: #5A6E3D;
+  width: 20%;
+  max-height: 450px;
+  float: left;
+  padding: 3vh 5vh;
+  background-clip: content-box;
+}
+
+/* This is of course the very last part of our website, although very important it is the footer. */
+
+.hours {
+  width: 100%;
+  background-color: #6A8F6A;
+  overflow: hidden;
+  height: 140px;
+  display: flex;
+  justify-content: flex-start;
+  font-family: Arial, Helvetica, sans-serif;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  border-top: 2px solid rgba(33, 33, 33, 0.2);
+}
+
+.headerhours {
+  margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .hours {
+    flex-direction: column;  /* Stack elements vertically on small screens */
+    height: auto;  /* Adjust height for stacked layout */
+    align-items: center;  /* Ensure the content stays centered vertically */
+  }
+
+  .headerhours {
+    margin: 10px 0;  /* Adjust margins for better spacing */
+    width: 100%;  /* Make sure each .headerhours div takes up full width */
+    text-align: center;  /* Keep text centered */
+  }
+}
+
+footer {
+  background-color: #263A28;
+  width: 100%;
+  height: 160px;
+  float: left;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  animation: slideInFromTop 1s ease-in-out;
+  color: #99C2A2;
+}
+
+.footerbar {
+  height: 105px;
+  max-width: 1200px;
+  position: relative;
+  text-align: center;
+  font-weight: 700;
+  vertical-align: auto;
+}
+
+.footerbar a{
+  padding: 25px 20px;
+}
+
+.footer .footerbar a {
+  color: black;
+  /* margin-left: 25px; */
+  font-size: 1.5rem;
+  transition: all 0.5s ease;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.footer .footerbar a:hover {
+  color: #5D4E6D;
+  text-shadow: 0px 0px 30px #5D4E6D;
+}
+
+
+/* underline on nav bar*/
+.footer .footerbar a{
+  position: relative;
+  text-decoration:none;
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline;
+}
+
+
+.footer .footerbar a::before{
+content: "";
+position: absolute;
+width: 100%;
+height: 2px;
+bottom: 0;
+left: 0;
+background-color: #5D4E6D;
+visibility: hidden;
+transform: scaleX(0);
+transition: all 0.3s ease-in-out;
+}
+
+.CRFoot {
+  width: 100%;
+  height: 50px;
+  background-color: #161A16;
+  color: #A3A38C;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;  /* Centers horizontally */
+  align-items: center;  /* Centers vertically */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Register Section */
+
+.registerbody {
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  /* min-height: 800px; */
+  /* overflow: hidden; */
+}
+
+.registerform {
+  /* border-radius: 5px; */
+  background-color: #f2f2f2;
+  padding: 20px;
+  /* height: 100%; */
+  /* height: 500px; */
+}
+
+input[type=text], input[type=password] {
+  width: 100%; 
+  padding: 12px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: none
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  /* background-color: lightsteelblue; */
+  outline: none;
+}
+
+.regishr {
+  border: 1px solid #f2f2f2;
+  margin-bottom: 25px;
+}
+
+.registerbutton {
+  width: 100%;
+  background-color: #7A8450;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.registerbutton:hover {
+  opacity: 1;
+}
+
+.signin {
+  background-color: #f2f2f2;
+  text-align: center;
+  border: none;
+  height: 70px;
+}
+
+hr {
+  margin-bottom: 0px;
+}
+
+.RegisOrderNow {
+  border-top: 3px solid black;  
+  border-bottom: 3px solid black;
+  text-align: center;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.RegisOrderNow p {
+  font-size: 20px;
+}
+
+/* Start of about section */
+
+.AbtHome{
+  background-color: #F4E3C1;
+  height: 600px;
+  width: 100%;
+  border-bottom: 2px solid grey;
+  overflow: hidden;
+ }
+
+  .Abtinfo{
+  background-color: white;
+  width: 70%;
+  height: 500px;
+  margin-top:40px;
+  /* background-clip: content-box; */
+  border-radius: 25px;
+  box-shadow: 0 0 15px black;
+}
+
+.AbtH1{
+  text-align: center;
+  padding-top: 20px;
+  font-size: 60px;
+}
+
+.Abtinfo p{
+  text-align: center;
+  font-size: 30px;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+  
+  
+  
+.Abtftt{
+  margin: 0;
+  background-color: #A3B18A;
+  height: 700px;
+  border-bottom: 2px solid grey;
+  overflow: hidden;
+}
+  
+.Abtinfoftt{
+  background-color: white;
+  width: 99%;
+  height: 620px;
+  margin-top:40px;
+  margin-bottom:50px;
+  background-clip: content-box;
+  border-radius: 25px;
+  box-shadow: 0 0 15px black;
+  /* float:right; */
+}
+  
+.fttimg{
+  position: relative;
+  width: 49%;
+  height: 55vh;
+  border-radius: 15px 15px 15px 15px;
+  align-items: center;
+  transition: .3s ease-in-out;
+  float: left;
+  margin-top: -89px;
+  height: 620px;
+}
+
+/* .prepimg{
+  position: relative;
+  width: 49%;
+  height: 550px;
+  border-radius: 15px 15px 15px 15px;
+  align-items: center;
+  transition: .3s ease-in-out;
+  float: right;
+} */
+  
+.Abtinfoftt p{
+  text-align: left;
+  /* font-size: 27px; */
+  width: 45%;
+  float: right;
+  margin-right: 30px;
+  padding-top: 30px;
+  font-size: 22px;
+ }
+  
+.AbtH2{
+  text-align: center;
+  padding-top: 20px;
+  font-size: 60px;
+  width: 50%;
+  position: relative;
+  left: 75%;
+  transform: translateX(-50%);
+}
+  
+  /* .Abtap{
+    background-color: #3E5641;
+    height: 60vh;
+    border-bottom: 2px solid grey;
+   }
+  
+   .Abtinfoap{
+    background-color: white;
+    width: 70%;
+    height: 50vh;
+    margin-top:4vh;
+    background-clip: content-box;
+    border-radius: 25px;
+    box-shadow: 0 0 15px black;
+  }
+  
+  .AbtH3{
+    text-align: center;
+    padding-top: 20px;
+  }
+  
+  .Abtinfoap p{
+    text-align: center;
+    font-size: 18px;
+   padding-top: 30px;
+  } */
+  
+.Abtprep{
+  background-color: #DDBEA9;
+  height: 620px;
+  border-bottom: 2px solid grey;
+  overflow: hidden;
+}
+   
+   
+.Abtinfoprep{
+  background-color: white;
+  width: 99%;
+  height: 550px;
+  margin-top:40px;
+  margin-bottom: 50px;
+  background-clip: content-box;
+  border-radius: 25px;
+  box-shadow: 0 0 15px black;
+  float:left;
+  
+}
+   
+.prepimg{
+  position: relative;
+  width: 49%;
+  height: 550px;
+  border-radius: 15px 15px 15px 15px;
+  align-items: center;
+  transition: .3s ease-in-out;
+  float: right;
+}
+  
+.Abtinfoprep p{
+  text-align: left;
+  font-size: 18px;
+  width: 45%;
+  float: left;
+  margin-left: 30px;
+  padding-top: 40px;
+  font-size: 30px;
+ 
+}
+  
+.AbtH4{
+  text-align: center;
+  margin-left: 30px;
+  width: 35%;
+  float:left;
+  padding-top: 20px;
+  font-size: 60px;
+}
+  
+.AbtSus{
+  background-color: #5A6E3D;
+  height: 480px;
+  border-bottom: 2px solid grey;
+  overflow: hidden;
+}
+  
+.Abtinfosus{
+  background-color: white;
+  width: 70%;
+  height: 400px;
+  margin-top:40px;
+  background-clip: content-box;
+  border-radius: 25px;
+  box-shadow: 0 0 15px black;
+}
+  
+.AbtH5{
+  text-align: center;
+  padding-top: 20px;
+  font-size: 60px;
+}
+  
+.Abtinfosus p{
+  text-align: center;
+  padding-top: 30px;
+  font-size: 30px;
+}
+  
+  /* .AbtFAQ{
+    background-color: #E4C1A2;
+    height: 80vh;
+    border-bottom: 2px solid grey;
+   }
+  
+   .AbtinfoFAQ{
+    background-color: white;
+    width: 90%;
+    height: 70vh;
+    margin-top:4vh;
+    background-clip: content-box;
+    border-radius: 25px;
+    box-shadow: 0 0 15px black;
+    
+  }
+  
+  .AbtH6{
+    text-align: center;
+    padding-top: 20px;
+  }
+  
+  .AbtinfoFAQ p{
+    text-align: left;
+    padding-left: 20px;
+    font-size: 18px;
+   padding-top: 30px;
+   font-size: 4vh;
+  }
+
+  .AbtinfoFAQ h2{
+    text-align: left;
+    padding-left: 20px;
+    font-size: 18px;
+   padding-top: 10px;
+   font-size: 3vh;
+   font-weight: normal;
+  } */
+
+.AbtFAQ {
+  background-color: #E4C1A2;
+  height: 650px;
+  border-bottom: 2px solid grey;
+  overflow: hidden;
+}
+
+.AbtinfoFAQ {
+  background-color: white;
+  width: 90%;
+  height: auto;
+  margin-top: 40px;
+  border-radius: 25px;
+  box-shadow: 0 0 15px black;
+  padding: 20px;
+}
+
+.faq-question {
+  padding: 15px;
+  width: 98%;
+  text-align: left;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 30px;
+  transition: 0.3s;
+}
+
+.faq-question:hover {
+    background-color: #5A6E3D;
+}
+
+.faq-answer {
+    padding: 15px;
+    display: none;
+    border-left: 4px solid #5A6E3D;
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.faq-question.active {
+    background-color: #5A6E3D;
+}
+
+/* MENU SECTION */
+.menu {
+  font-size: 16px;
+  background: linear-gradient(to bottom,#F4E3C1, #A3B18A);
+  font-family: Arial, Helvetica, sans-serif;
+  color: #3D5A40;
+}
+
+/* Drinks */
+.menu1 {
+  background: linear-gradient(to bottom, #A3B18A, #DDBEA9);
+  min-height: 630px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* Lunch */
+.menu2 {
+  background-color: #DDBEA9;
+  background: linear-gradient(to bottom, #DDBEA9, #5A6E3D);
+  min-height: 630px;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+/* Dinner */
+.menu3 {
+  background-color: #5A6E3D;
+  background: linear-gradient(to bottom, #5A6E3D, #E4C1A2);
+  min-height: 630px;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+/* Sides */
+.menu4 {
+  background-color: #E4C1A2;
+  min-height: 630px;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* headings */
+.menu h1{
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 5px;
+  font-size: 5rem;
+  margin-top: 0;
+  padding-top: 50px;
+
+}
+.menu h3{
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 5px;
+  font-size: 2rem;
+  margin-top: 0;
+  padding-top: 50px;
+}
+
+.menu-group-heading{
+  margin: 0;
+  padding-bottom: 30px;
+  padding-top: 20px;
+  border-bottom: 2px solid grey;
+  padding-left: 20px;
+  font-size: 3rem;
+          
+}
+
+/* creating the flex boxes */
+.dishes1 {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.dishes2 {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.dishes3 {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.dishes4 {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+/* controls the box part */
+.dish{
+  margin-top: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px black;
+  transition: .3s ease-in-out;
+  width: 390px;
+  height: 400px;
+  background: white;
+  padding-bottom: 25px;
+}
+
+.dish2{
+  margin-top: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px black;
+  transition: .3s ease-in-out;
+  width: 390px;
+  height: 370px;
+  background: white;
+  padding-bottom: 25px;
+}
+
+.dish3{
+  margin-top: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px black;
+  transition: .3s ease-in-out;
+  width: 390px;
+  height: 430px;
+  background: white;
+  padding-bottom: 25px;
+}
+
+/* text aligning for all the boxes */
+.dishes1 h2{
+  text-align: center;
+}
+.dishes1 p{
+  text-align: center;
+  padding-top: 2.5%;
+}
+.price{
+  text-align: center;
+}
+
+.dishes2 h2{
+  text-align: center;
+}
+.dishes2 p{
+  text-align: center;
+  padding-top: 2.5%;
+}
+
+.dishes3 h2{
+  text-align: center;
+}
+.dishes3 p{
+  text-align: center;
+  padding-top: 2%;
+}
+
+.dishes4 h2{
+  text-align: center;
+  /* font-weight: 1000; */
+  /* font-size: xx-large; */
+}
+.dishes4 p{
+  text-align: center;
+  padding-top: 2.5%;
+  /* font-size: x-large; */
+}
+
+/* the images */
+.dishes1 img{
+  position: relative;
+  width: 390px;
+  height: 180px;
+  border-radius: 15px 15px 0 0;
+  align-items: center;
+  transition: .3s ease-in-out;
+}
+.dishes2 img{
+  position: relative;
+  width: 390px;
+  height: 180px;
+  border-radius: 15px 15px 0 0;
+  align-items: center;
+  transition: .3s ease-in-out;
+}
+
+.dishes3 img{
+  position: relative;
+  width: 390px;
+  height: 180px;
+  border-radius: 15px 15px 0 0;
+  align-items: center;
+  transition: .3s ease-in-out;
+}
+
+.dishes4 img{
+  position: relative;
+  width: 390px;
+  height: 180px;
+  border-radius: 15px 15px 0 0;
+  align-items: center;
+  transition: .3s ease-in-out;
+}
+
+/* hover */
+.dish:hover{
+  transform: scale(1.1);
+  box-shadow: 0 0 50px #FFC4D1;
+}
+
+.dish2:hover{
+  transform: scale(1.1);
+  box-shadow: 0 0 50px #FFC4D1;
+}
+
+.dish3:hover{
+  transform: scale(1.1);
+  box-shadow: 0 0 50px #FFC4D1;
+}
+
+/* References */
+
+.referencesh1 {
+  height: 42ch;
+  background-color: #F4E3C1;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 30px 35px;
+}
+
+.scrcl {
+  height: 200px;
+  background-color: #A3B18A;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px 20px;
+}
+
+.scrcl a {
+  max-width: 100%;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  display: inline-block;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.scrcl a:visited {
+  color: #5D4E6D;
+}
+
+.scrcl a:hover {
+  color: #e4c1a2;
+  text-decoration: underline;
+  transition: color 0.3s ease-in-out;
+}
+
+.scrcl a:active {
+  color: #ff5733;
+}
+
+.worklogs {
+  height: auto;
+  background-color: #DDBEA9;
+  padding: 20px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.worklogs a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  display: inline-block;
+}
+
+.worklogs a:visited {
+  color: #5D4E6D;
+}
+
+.worklogs a:hover {
+  color: black;
+  text-decoration: underline;
+  transition: color 0.3s ease-in-out;
+}
+
+.worklogs a:active {
+  color: #ff5733;
+}
+
+.citations {
+  height: auto;
+  max-width: 100%;
+  background-color: #99C2A2;
+  padding: 20px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.citations a {
+  color: #007bff;
+  max-width: 100%;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  display: inline-block;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.citations a:visited {
+  color: #5D4E6D;
+}
+
+.citations a:hover {
+  color: #e4c1a2;
+  text-decoration: underline;
+  transition: color 0.3s ease-in-out;
+}
+
+.citations a:active {
+  color: #ff5733;
+}

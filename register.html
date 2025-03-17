@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="style.css">
+    <link rel="menu" href="menu.html">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>The Treehouse</title>
+</head>
+<header>
+    <div class="navbar">
+        <div>
+            <a href="home.html">
+                <img class="NavImg" src="images/simple Tree house-1 (1).png">
+                <img class="navimgsscreen" src="images/simple Tree house-1 (1).png">
+            </a>
+        </div>
+
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+
+        <ul class="center-nav">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="references.html">References</a></li>
+
+          <li class="icons-nav">
+              <box-icon name='search'></box-icon>
+          </li>
+        </ul>
+    </div>
+</header>
+<body>
+    <div class="registerbody">
+        <div class="RegisOrderNow">
+            <a href="menu.html"><p>View our menu!</p></a>
+        </div>
+        <form>
+            <div class="registerform">
+                
+                <h1 class="TextCenter">Please Register!</h1>
+                <p class="TextCenter">Fill in this form to make an account!</p>
+                <hr class="regishr">
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Email" name="email" id="email" required>
+
+                <label><b>Password</b></label>
+                <input type="password" placeholder=Password name="psword" id="psword" required>
+
+                <label><b>Confirm Password</b></label>
+                <input type="password" placeholder="Confirm Password" name="pswordcon" id="pswordcon" required>
+                </hr>
+                <button type="submit" class="registerbutton">Register</button>
+            </div>
+            <div class="registerform signin">
+                <!-- <p>Already have an account? <a href="#" class="links">Sign In</a></p> -->
+            </div>
+        </form>
+    </div>
+    <div class="hours">
+        <div class="headerhours">
+            <h1>Kitchen Hours:</h1>
+            <h4>Monday-Friday:</h4>
+            <p>9:00 AM - 9:00 PM</p>
+            <h4>Saturday-Sunday:</h4>
+            <p>9:00 AM - 9:30PM</p>
+        </div>
+        <div class="headerhours">
+            <h1>Smoothie Bar Hours:</h1>
+            <h4>Monday-Friday:</h4>
+            <p>7:00 AM - 11:00 PM</p>
+            <h4>Saturday-Sunday:</h4>
+            <p>7:00 AM - 12:00AM</p>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="footerbar">
+                <a href="#">Home</a>
+                <a href="#">Menu</a>
+                <a href="#">About</a>
+                <a href="#">Order</a>
+                <a href="#">Account</a>
+            </div>
+        </div>
+    </footer>
+    <div class="CRFoot">
+        <p>Copyright ©2025</p>
+    </div>
+    <script src="responsive.js"></script>
+</body>
+</html>
