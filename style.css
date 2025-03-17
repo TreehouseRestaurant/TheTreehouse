@@ -391,10 +391,15 @@ transition: all 0.3s ease-in-out;
   text-align: center;
 }
 
+.RegisterBox h1 {
+  padding-top: 20px;
+}
+
 .RegisterBox p {
   text-align: center;
   color: #FFFFFF;
   font-size: 15px;
+  padding-top: 20px;
 }
 
 .RNow {
